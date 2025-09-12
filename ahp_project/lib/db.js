@@ -17,7 +17,7 @@ export function getPool() {
     // Coba aktifkan SSL kalau hosting mendukung. Jika gagal, hapus properti ssl-nya.
     pool = mysql.createPool({
       ...base,
-      ssl: { rejectUnauthorized: false },
+      ssl: { rejectUnauthorized: true },
     });
   }
   return pool;
